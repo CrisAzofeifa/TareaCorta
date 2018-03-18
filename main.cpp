@@ -7,11 +7,12 @@
 using namespace std;
 
 int main() {
-    BigArray *big = new BigArray;
-    big->Generar();
-
+    BigArray *noe  = new BigArray;
+    noe->Generar();
     Pagina *page = new Pagina;
     page->cargarDatos(0);
+
+
 
 
     return 0;

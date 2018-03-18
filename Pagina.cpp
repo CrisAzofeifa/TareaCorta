@@ -22,7 +22,7 @@ void Pagina::cargarDatos(int inicial) {
                 switch(letra)
                 {
                     case '0':
-                        numero += 0;
+                        numero += 0;i++;fichero.get(letra);
                         break;
                     case '1': numero += 1*pow(10,i); i++;fichero.get(letra);
                         break;
@@ -45,7 +45,8 @@ void Pagina::cargarDatos(int inicial) {
                     case ',':
                         numero = invertirNumero(numero);
 
-                        vec[cantidadNumeros] = numero;
+
+                        pagina[cantidadNumeros] = numero;
                         cantidadNumeros++;
                         cout<<"Soy este número: "<<numero<<endl;
                         i = 0;
@@ -57,12 +58,17 @@ void Pagina::cargarDatos(int inicial) {
                         fichero.close();
                         break;
                 }
-
         }
 
-        for(int x = 0; x<255; x++){
-            cout<<vec[x]<<" , ";
+
+        for(int x = 0; x<256; x++){
+
+            cout<<pagina[x]<<" , ";
+
         }
+        cout<<"Tamaño: "<< sizeof(pagina)/ sizeof(*pagina);
+
+
 
 
     }

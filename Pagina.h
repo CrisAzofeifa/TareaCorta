@@ -17,7 +17,7 @@ public:
     void cargarDatos(int inicial);
     int invertirNumero(int numero);
 
-    int vec[255];
+    int pagina[256];
 
 private:
     int posInicialEnBigArray, posFinalEnBigArray;
