@@ -16,8 +16,9 @@ void Pagina::cargarDatos(int inicial) {
     if(!fichero.fail()) {
         fichero.get(letra);
         int i = 0, cantidadNumeros = 0, numero = 0;
+        bool nostop = true;
 
-        while (!fichero.eof()) {
+        while (!fichero.eof() && nostop) {
                 switch(letra)
                 {
                     case '0':
@@ -44,23 +45,31 @@ void Pagina::cargarDatos(int inicial) {
                     case ',':
                         numero = invertirNumero(numero);
 
-                        paginacion[cantidadNumeros] = numero;
+                        vec[cantidadNumeros] = numero;
                         cantidadNumeros++;
-                        //cout<<"Soy este número: "<<numero<<endl;
+                        cout<<"Soy este número: "<<numero<<endl;
                         i = 0;
                         numero = 0;
                         fichero.get(letra);
+                        break;
+                    default:
+                        nostop = false;
+                        fichero.close();
                         break;
                 }
 
         }
 
+        for(int x = 0; x<15; x++){
+            cout<<vec[x]<<" , ";
+        }
+
+
     }
 
-  //  fichero.close();
 
-    int x = paginacion[0];
-    cout<<x;
+
+
 }
 
 int Pagina::invertirNumero(int numero) {
@@ -81,3 +90,5 @@ int Pagina::invertirNumero(int numero) {
 
     return nuevo;
 }
+
+

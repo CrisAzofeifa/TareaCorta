@@ -1,5 +1,3 @@
-
-
 #include "BigArray.h"
 #include <iostream>
 

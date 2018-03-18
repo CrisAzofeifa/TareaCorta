@@ -13,12 +13,14 @@
 
 class Pagina {
 public:
+
     void cargarDatos(int inicial);
     int invertirNumero(int numero);
 
+    int vec[14];
+
 private:
     int posInicialEnBigArray, posFinalEnBigArray;
-    int paginacion[256];
 
 
 };

@@ -84,10 +84,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/cris/CLionProjects/TareaCorta/BigArray.cpp">
+			<Option target="TareaCorta"/>
+		</Unit>
+		<Unit filename="/home/cris/CLionProjects/TareaCorta/BigArray.h">
+			<Option target="TareaCorta"/>
+		</Unit>
 		<Unit filename="/home/cris/CLionProjects/TareaCorta/Pagina.cpp">
 			<Option target="TareaCorta"/>
 		</Unit>
 		<Unit filename="/home/cris/CLionProjects/TareaCorta/Pagina.h">
+			<Option target="TareaCorta"/>
+		</Unit>
+		<Unit filename="/home/cris/CLionProjects/TareaCorta/QuickSort.cpp">
+			<Option target="TareaCorta"/>
+		</Unit>
+		<Unit filename="/home/cris/CLionProjects/TareaCorta/QuickSort.h">
 			<Option target="TareaCorta"/>
 		</Unit>
 		<Unit filename="/home/cris/CLionProjects/TareaCorta/main.cpp">

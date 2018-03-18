@@ -123,6 +123,33 @@ TareaCorta/fast:
 	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/build
 .PHONY : TareaCorta/fast
 
+BigArray.o: BigArray.cpp.o
+
+.PHONY : BigArray.o
+
+# target to build an object file
+BigArray.cpp.o:
+	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/BigArray.cpp.o
+.PHONY : BigArray.cpp.o
+
+BigArray.i: BigArray.cpp.i
+
+.PHONY : BigArray.i
+
+# target to preprocess a source file
+BigArray.cpp.i:
+	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/BigArray.cpp.i
+.PHONY : BigArray.cpp.i
+
+BigArray.s: BigArray.cpp.s
+
+.PHONY : BigArray.s
+
+# target to generate assembly for a file
+BigArray.cpp.s:
+	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/BigArray.cpp.s
+.PHONY : BigArray.cpp.s
+
 Pagina.o: Pagina.cpp.o
 
 .PHONY : Pagina.o
@@ -149,6 +176,33 @@ Pagina.s: Pagina.cpp.s
 Pagina.cpp.s:
 	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/Pagina.cpp.s
 .PHONY : Pagina.cpp.s
+
+QuickSort.o: QuickSort.cpp.o
+
+.PHONY : QuickSort.o
+
+# target to build an object file
+QuickSort.cpp.o:
+	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/QuickSort.cpp.o
+.PHONY : QuickSort.cpp.o
+
+QuickSort.i: QuickSort.cpp.i
+
+.PHONY : QuickSort.i
+
+# target to preprocess a source file
+QuickSort.cpp.i:
+	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/QuickSort.cpp.i
+.PHONY : QuickSort.cpp.i
+
+QuickSort.s: QuickSort.cpp.s
+
+.PHONY : QuickSort.s
+
+# target to generate assembly for a file
+QuickSort.cpp.s:
+	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/QuickSort.cpp.s
+.PHONY : QuickSort.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... TareaCorta"
+	@echo "... BigArray.o"
+	@echo "... BigArray.i"
+	@echo "... BigArray.s"
 	@echo "... Pagina.o"
 	@echo "... Pagina.i"
 	@echo "... Pagina.s"
+	@echo "... QuickSort.o"
+	@echo "... QuickSort.i"
+	@echo "... QuickSort.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

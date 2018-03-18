@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TareaCorta.dir/main.cpp.o"
   "CMakeFiles/TareaCorta.dir/Pagina.cpp.o"
+  "CMakeFiles/TareaCorta.dir/QuickSort.cpp.o"
+  "CMakeFiles/TareaCorta.dir/BigArray.cpp.o"
   "TareaCorta.pdb"
   "TareaCorta"
 )

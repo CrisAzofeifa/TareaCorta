@@ -2,19 +2,13 @@
 #include <fstream>
 #include <string>
 #include "Pagina.h"
+#include "BigArray.h"
 
 using namespace std;
 
 int main() {
-
-  /*  Pagina *page = new Pagina();
-    page->cargarDatos(0);
-*/
-
-    int vec[5];
-    for(){
-        
-    }
+    BigArray *big = new BigArray;
+    big->Generar();
 
 
     return 0;

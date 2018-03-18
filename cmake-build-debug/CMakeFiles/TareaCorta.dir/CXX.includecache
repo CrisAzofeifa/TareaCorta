@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/home/cris/CLionProjects/TareaCorta/BigArray.cpp
+BigArray.h
+/home/cris/CLionProjects/TareaCorta/BigArray.h
+iostream
+-
+
+/home/cris/CLionProjects/TareaCorta/BigArray.h
+fstream
+-
+
 /home/cris/CLionProjects/TareaCorta/Pagina.cpp
 Pagina.h
 /home/cris/CLionProjects/TareaCorta/Pagina.h
@@ -22,6 +32,14 @@ string
 math.h
 -
 
+/home/cris/CLionProjects/TareaCorta/QuickSort.cpp
+QuickSort.h
+/home/cris/CLionProjects/TareaCorta/QuickSort.h
+stdio.h
+-
+
+/home/cris/CLionProjects/TareaCorta/QuickSort.h
+
 /home/cris/CLionProjects/TareaCorta/main.cpp
 iostream
 -
@@ -31,4 +49,6 @@ string
 -
 Pagina.h
 /home/cris/CLionProjects/TareaCorta/Pagina.h
+BigArray.h
+/home/cris/CLionProjects/TareaCorta/BigArray.h
 
