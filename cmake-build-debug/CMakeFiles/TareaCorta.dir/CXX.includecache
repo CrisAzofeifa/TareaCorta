@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cris/CLionProjects/TareaCorta/Pagina.cpp
+Pagina.h
+/home/cris/CLionProjects/TareaCorta/Pagina.h
+iostream
+-
+
+/home/cris/CLionProjects/TareaCorta/Pagina.h
+iostream
+-
+fstream
+-
+string
+-
+math.h
+-
+
+/home/cris/CLionProjects/TareaCorta/main.cpp
+iostream
+-
+fstream
+-
+string
+-
+Pagina.h
+/home/cris/CLionProjects/TareaCorta/Pagina.h
+

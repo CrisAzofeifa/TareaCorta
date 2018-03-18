@@ -123,6 +123,33 @@ TareaCorta/fast:
 	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/build
 .PHONY : TareaCorta/fast
 
+Pagina.o: Pagina.cpp.o
+
+.PHONY : Pagina.o
+
+# target to build an object file
+Pagina.cpp.o:
+	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/Pagina.cpp.o
+.PHONY : Pagina.cpp.o
+
+Pagina.i: Pagina.cpp.i
+
+.PHONY : Pagina.i
+
+# target to preprocess a source file
+Pagina.cpp.i:
+	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/Pagina.cpp.i
+.PHONY : Pagina.cpp.i
+
+Pagina.s: Pagina.cpp.s
+
+.PHONY : Pagina.s
+
+# target to generate assembly for a file
+Pagina.cpp.s:
+	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/Pagina.cpp.s
+.PHONY : Pagina.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... TareaCorta"
+	@echo "... Pagina.o"
+	@echo "... Pagina.i"
+	@echo "... Pagina.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
