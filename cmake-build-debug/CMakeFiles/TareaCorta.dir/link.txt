@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/TareaCorta.dir/main.cpp.o  -o TareaCorta 
