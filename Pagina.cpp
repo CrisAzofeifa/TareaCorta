@@ -8,7 +8,7 @@
 using namespace std;
 
 void Pagina::cargarDatos(int inicial) {
-    const string nFichero = "Array.txt";
+    const string nFichero = "BigArray.txt";
     char letra;
     ifstream fichero;
     fichero.open(nFichero.c_str());
@@ -18,7 +18,7 @@ void Pagina::cargarDatos(int inicial) {
         int i = 0, cantidadNumeros = 0, numero = 0;
         bool nostop = true;
 
-        while (!fichero.eof() && nostop) {
+        while (!fichero.eof() && nostop && cantidadNumeros<256) {
                 switch(letra)
                 {
                     case '0':
@@ -60,7 +60,7 @@ void Pagina::cargarDatos(int inicial) {
 
         }
 
-        for(int x = 0; x<15; x++){
+        for(int x = 0; x<255; x++){
             cout<<vec[x]<<" , ";
         }
 

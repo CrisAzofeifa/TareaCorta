@@ -11,12 +11,12 @@ void BigArray:: Generar() {
     srand(Seed);
     int num, c;
 
-    for (c = 1; c <= 10000; c++) { //Ampliar cantidad de numeros
+    for (c = 1; c <= 10240; c++) { //Ampliar cantidad de numeros
 
         num = 1 + rand() % (5 - 2000);    // Cambiar a numeros mas grandes XD
         cout << num << endl;
         if (fichero.is_open()){
-            if (c <5){
+            if (c <10240){
                 fichero << num << ",";
 
             }
