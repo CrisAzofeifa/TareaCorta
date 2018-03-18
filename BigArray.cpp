@@ -5,8 +5,8 @@
 
 using namespace std;
 void BigArray:: Generar() {
-    remove ( "BigArray.txt");
-    fichero.open("BigArray.txt",ios::app);
+    remove("BigArray.txt");
+    fichero.open("BigArray.txt", ios::app);
 
     srand(time(0));
     int Seed = rand();
@@ -15,9 +15,20 @@ void BigArray:: Generar() {
 
     for (c = 1; c <= 5; c++) { //Ampliar cantidad de numeros
 
-        num = 1 + rand() % ( 5- 2000);    // Cambiar a numeros mas grandes XD
-        cout << num <<  endl;
-        aFichero(num);
+        num = 1 + rand() % (5 - 2000);    // Cambiar a numeros mas grandes XD
+        cout << num << endl;
+        if (fichero.is_open()){
+            if (c <5){
+                fichero << num << ",";
+
+            }
+
+
+        else{
+                fichero << num ;
+
+        }
+     }
 
     }
 
@@ -27,11 +38,4 @@ void BigArray:: Generar() {
 
 }
 
-void BigArray:: aFichero(int num) {
 
-    if (fichero.is_open()) {
-        fichero << num << ",";
-
-    }
-
-}
