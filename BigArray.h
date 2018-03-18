@@ -11,7 +11,6 @@ using namespace std;
 class BigArray {
 public:
     void  Generar();
-    void aFichero(int);
     fstream fichero;
 };
 
