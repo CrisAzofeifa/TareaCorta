@@ -90,6 +90,12 @@
 		<Unit filename="/home/cris/CLionProjects/TareaCorta/BigArray.h">
 			<Option target="TareaCorta"/>
 		</Unit>
+		<Unit filename="/home/cris/CLionProjects/TareaCorta/Controlador.cpp">
+			<Option target="TareaCorta"/>
+		</Unit>
+		<Unit filename="/home/cris/CLionProjects/TareaCorta/Controlador.h">
+			<Option target="TareaCorta"/>
+		</Unit>
 		<Unit filename="/home/cris/CLionProjects/TareaCorta/Pagina.cpp">
 			<Option target="TareaCorta"/>
 		</Unit>

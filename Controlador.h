@@ -5,13 +5,20 @@
 #ifndef TAREA_CORTA_CONTROLADOR_H
 #define TAREA_CORTA_CONTROLADOR_H
 
+#include "Pagina.h"
+
 
 class Controlador {
 public:
-    int  buscarPos(int );
-
-    bool  comprobarPag(int );
+    void inicializar();
+    int  buscarPagina(int pos);
+    int posEnPagina(int pos);
+    bool  comprobarPag(int pagina);
     int  sacarElemento(int, int );
+
+private:
+    Pagina paginasCargadas[3];
+
 
 };
 

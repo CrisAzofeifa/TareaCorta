@@ -150,6 +150,33 @@ BigArray.cpp.s:
 	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/BigArray.cpp.s
 .PHONY : BigArray.cpp.s
 
+Controlador.o: Controlador.cpp.o
+
+.PHONY : Controlador.o
+
+# target to build an object file
+Controlador.cpp.o:
+	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/Controlador.cpp.o
+.PHONY : Controlador.cpp.o
+
+Controlador.i: Controlador.cpp.i
+
+.PHONY : Controlador.i
+
+# target to preprocess a source file
+Controlador.cpp.i:
+	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/Controlador.cpp.i
+.PHONY : Controlador.cpp.i
+
+Controlador.s: Controlador.cpp.s
+
+.PHONY : Controlador.s
+
+# target to generate assembly for a file
+Controlador.cpp.s:
+	$(MAKE) -f CMakeFiles/TareaCorta.dir/build.make CMakeFiles/TareaCorta.dir/Controlador.cpp.s
+.PHONY : Controlador.cpp.s
+
 Pagina.o: Pagina.cpp.o
 
 .PHONY : Pagina.o
@@ -243,6 +270,9 @@ help:
 	@echo "... BigArray.o"
 	@echo "... BigArray.i"
 	@echo "... BigArray.s"
+	@echo "... Controlador.o"
+	@echo "... Controlador.i"
+	@echo "... Controlador.s"
 	@echo "... Pagina.o"
 	@echo "... Pagina.i"
 	@echo "... Pagina.s"

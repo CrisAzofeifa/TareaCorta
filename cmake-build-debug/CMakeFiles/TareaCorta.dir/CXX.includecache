@@ -16,6 +16,16 @@ iostream
 fstream
 -
 
+/home/cris/CLionProjects/TareaCorta/Controlador.cpp
+Controlador.h
+/home/cris/CLionProjects/TareaCorta/Controlador.h
+iostream
+-
+
+/home/cris/CLionProjects/TareaCorta/Controlador.h
+Pagina.h
+/home/cris/CLionProjects/TareaCorta/Pagina.h
+
 /home/cris/CLionProjects/TareaCorta/Pagina.cpp
 Pagina.h
 /home/cris/CLionProjects/TareaCorta/Pagina.h
@@ -51,4 +61,6 @@ Pagina.h
 /home/cris/CLionProjects/TareaCorta/Pagina.h
 BigArray.h
 /home/cris/CLionProjects/TareaCorta/BigArray.h
+Controlador.h
+/home/cris/CLionProjects/TareaCorta/Controlador.h
 

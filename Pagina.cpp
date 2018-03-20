@@ -7,14 +7,30 @@
 
 using namespace std;
 
-void Pagina::cargarDatos(int inicial) {
+void Pagina::cargarDatos(int numeroPagina) {
     const string nFichero = "BigArray.txt";
     char letra;
     ifstream fichero;
     fichero.open(nFichero.c_str());
 
+
     if(!fichero.fail()) {
-        fichero.get(letra);
+        int cont = 0;
+        int x = 0;
+
+        if(numeroPagina == 0) {
+            fichero.get(letra);
+
+        }else{
+            while(x<(256*numeroPagina)-1) {
+                fichero.get(letra);
+                if (letra == ',') {
+                   x++;
+            }
+                fichero.get(letra);
+            }
+        }
+
         int i = 0, cantidadNumeros = 0, numero = 0;
         bool nostop = true;
 
@@ -95,6 +111,14 @@ int Pagina::invertirNumero(int numero) {
     }
 
     return nuevo;
+}
+
+int Pagina::getPosInicial() {
+    return posInicialEnBigArray;
+}
+
+int Pagina::getPosFinal() {
+    return posFinalEnBigArray;
 }
 
 

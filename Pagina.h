@@ -12,10 +12,20 @@
 
 
 class Pagina {
+
+
 public:
 
-    void cargarDatos(int inicial);
+    Pagina(int inicio){
+        this->posInicialEnBigArray = inicio;
+        this->posFinalEnBigArray = inicio+256;
+
+    }
+
+    void cargarDatos(int numeroPagina);
     int invertirNumero(int numero);
+    int getPosInicial();
+    int getPosFinal();
 
     int pagina[256];
 

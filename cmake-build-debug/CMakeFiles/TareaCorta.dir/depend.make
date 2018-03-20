@@ -4,6 +4,10 @@
 CMakeFiles/TareaCorta.dir/BigArray.cpp.o: ../BigArray.cpp
 CMakeFiles/TareaCorta.dir/BigArray.cpp.o: ../BigArray.h
 
+CMakeFiles/TareaCorta.dir/Controlador.cpp.o: ../Controlador.cpp
+CMakeFiles/TareaCorta.dir/Controlador.cpp.o: ../Controlador.h
+CMakeFiles/TareaCorta.dir/Controlador.cpp.o: ../Pagina.h
+
 CMakeFiles/TareaCorta.dir/Pagina.cpp.o: ../Pagina.cpp
 CMakeFiles/TareaCorta.dir/Pagina.cpp.o: ../Pagina.h
 
@@ -11,6 +15,7 @@ CMakeFiles/TareaCorta.dir/QuickSort.cpp.o: ../QuickSort.cpp
 CMakeFiles/TareaCorta.dir/QuickSort.cpp.o: ../QuickSort.h
 
 CMakeFiles/TareaCorta.dir/main.cpp.o: ../BigArray.h
+CMakeFiles/TareaCorta.dir/main.cpp.o: ../Controlador.h
 CMakeFiles/TareaCorta.dir/main.cpp.o: ../Pagina.h
 CMakeFiles/TareaCorta.dir/main.cpp.o: ../main.cpp
 
