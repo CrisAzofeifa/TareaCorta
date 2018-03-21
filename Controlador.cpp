@@ -1,13 +1,9 @@
-//
-// Created by kimberlyc on 18/03/18.
-//
-
 #include "Controlador.h"
 #include <iostream>
 
 using namespace std;
 
-int Controlador::  buscarPagina(int pos){
+int Controlador:: buscarPagina(int pos){
 
     cout << "la pagina es "<< pos/256 ;
     int pagina = pos/256;
@@ -27,12 +23,14 @@ bool Controlador::comprobarPag(int numeroPag){
     return false;
 }
 
-int Controlador:: sacarElemento(int posicion){
-    if(comprobarPag(buscarPagina(posicion))){
-        return sacarPagina(buscarPagina(posicion)).pagina[posEnPagina(posicion)];
+int Controlador::sacarElemento(int posicion){
+    int numPagina = buscarPagina(posicion);
+    if(comprobarPag(numPagina)){
+        return sacarPagina(numPagina).pagina[posEnPagina(posicion)];
     }else{
-        cargarPagina(buscarPagina(posicion));
-        return sacarPagina(buscarPagina(posicion)).pagina[posEnPagina(posicion)];
+        descargarPagina(paginasCargadas[0].pagina);
+        cargarPagina(numPagina);
+        return sacarPagina(numPagina).pagina[posEnPagina(posicion)];
     }
 }
 
@@ -56,11 +54,23 @@ void Controlador::inicializar() {
     paginasCargadas[0] = *pagina1;
     paginasCargadas[1] = *pagina2;
     paginasCargadas[2] = *pagina3;
+
+    bubbleSort(10240);
 }
 
-void Controlador::descargarPagina() {
+void Controlador::descargarPagina(int numeros[]) {
+    const string NombreArchivo = "Array.txt";
+    ofstream fichero;
+    fichero.open(NombreArchivo.c_str());
+
+    for(int x = 0; x<256 ; x++){
+        fichero<<numeros[x]<<" , ";
+    }
+    fichero.close();
 
 }
+
+
 
 void Controlador::cargarPagina(int numeroPagina) {
     Pagina *pagina = new Pagina(numeroPagina);
@@ -76,5 +86,49 @@ Pagina Controlador::sacarPagina(int numeroPagina) {
         }
     }
     return Pagina(0);
+
+}
+
+void Controlador::insertarEnPos(int pos, int el) {
+
+    Pagina actual = sacarPagina(pos);
+    actual.pagina[posEnPagina(pos)] = el;
+
+}
+
+void Controlador::swap(int posJ, int posI)
+{
+    int temp = sacarElemento(posJ);
+    int temp2 = sacarElemento(posI);
+
+    insertarEnPos(posJ, temp);
+    insertarEnPos(posI, temp2);
+
+
+}
+
+// An optimized version of Bubble Sort
+    void Controlador::bubbleSort(int n)
+    {
+        int i, j;
+        for (i = 0; i < n-1; i++ ){
+
+            for (j = 0; j < n-i-1; j++)
+                {
+                    if (sacarElemento(j) > sacarElemento(j + 1)) {
+                        swap(j, j + 1);
+
+                    }
+                }
+        }
+    }
+
+void Controlador::sustituirReiniciar() {
+    descargarPagina(paginasCargadas[0].pagina);
+    descargarPagina(paginasCargadas[1].pagina);
+    descargarPagina(paginasCargadas[2].pagina);
+
+
+    rename("Array.txt","holiiii.txt");
 
 }

@@ -8,7 +8,7 @@
 using namespace std;
 
 void Pagina::cargarDatos(int numeroPagina) {
-    const string nFichero = "BigArray.txt";
+    string nFichero = "BigArray.txt";
     char letra;
     ifstream fichero;
     fichero.open(nFichero.c_str());
@@ -64,7 +64,6 @@ void Pagina::cargarDatos(int numeroPagina) {
 
                         pagina[cantidadNumeros] = numero;
                         cantidadNumeros++;
-                        cout<<"Soy este número: "<<numero<<endl;
                         i = 0;
                         numero = 0;
                         fichero.get(letra);
@@ -75,18 +74,6 @@ void Pagina::cargarDatos(int numeroPagina) {
                         break;
                 }
         }
-
-
-        for(int x = 0; x<256; x++){
-
-            cout<<pagina[x]<<" , ";
-
-        }
-        cout<<"Tamaño: "<< sizeof(pagina)/ sizeof(*pagina);
-
-
-
-
     }
 
 
