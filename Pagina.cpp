@@ -121,4 +121,8 @@ int Pagina::getPosFinal() {
     return posFinalEnBigArray;
 }
 
+int Pagina::getNumeroPagina() {
+    return numeroDePagina;
+}
+
 

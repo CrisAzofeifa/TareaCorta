@@ -12,9 +12,12 @@ class Controlador {
 public:
     void inicializar();
     int  buscarPagina(int pos);
-    int posEnPagina(int pos);
-    bool  comprobarPag(int pagina);
-    int  sacarElemento(int, int );
+    int  posEnPagina(int pos);
+    bool comprobarPag(int pagina);
+    int  sacarElemento(int pos);
+    void cargarPagina(int numeroPagina);
+    void descargarPagina();
+    Pagina sacarPagina(int numeroPagina);
 
 private:
     Pagina paginasCargadas[3];

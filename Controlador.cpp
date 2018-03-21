@@ -18,11 +18,22 @@ int Controlador::  buscarPagina(int pos){
 
 bool Controlador::comprobarPag(int numeroPag){
 
+    for(int x = 0; x<3; x++){
+        if(paginasCargadas[x].getNumeroPagina()==numeroPag){
+            return true;
+        }
+    }
 
+    return false;
 }
 
-int Controlador:: sacarElemento(int posicion, int pagina){
-
+int Controlador:: sacarElemento(int posicion){
+    if(comprobarPag(buscarPagina(posicion))){
+        return sacarPagina(buscarPagina(posicion)).pagina[posEnPagina(posicion)];
+    }else{
+        cargarPagina(buscarPagina(posicion));
+        return sacarPagina(buscarPagina(posicion)).pagina[posEnPagina(posicion)];
+    }
 }
 
 int Controlador::posEnPagina(int pos) {
@@ -45,4 +56,25 @@ void Controlador::inicializar() {
     paginasCargadas[0] = *pagina1;
     paginasCargadas[1] = *pagina2;
     paginasCargadas[2] = *pagina3;
+}
+
+void Controlador::descargarPagina() {
+
+}
+
+void Controlador::cargarPagina(int numeroPagina) {
+    Pagina *pagina = new Pagina(numeroPagina);
+    paginasCargadas[0] = paginasCargadas[1];
+    paginasCargadas[1] = paginasCargadas[2];
+    paginasCargadas[2] = *pagina;
+}
+
+Pagina Controlador::sacarPagina(int numeroPagina) {
+    for(int x=0; x<3; x++){
+        if(paginasCargadas[x].getNumeroPagina() == numeroPagina){
+            return paginasCargadas[x];
+        }
+    }
+    return Pagina(0);
+
 }

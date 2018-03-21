@@ -19,6 +19,7 @@ public:
     Pagina(int inicio){
         this->posInicialEnBigArray = inicio;
         this->posFinalEnBigArray = inicio+256;
+        this->numeroDePagina = inicio%256;
 
     }
 
@@ -26,11 +27,12 @@ public:
     int invertirNumero(int numero);
     int getPosInicial();
     int getPosFinal();
+    int getNumeroPagina();
 
     int pagina[256];
 
 private:
-    int posInicialEnBigArray, posFinalEnBigArray;
+    int posInicialEnBigArray, posFinalEnBigArray, numeroDePagina;
 
 
 };
