@@ -24,10 +24,11 @@ public:
     void bubbleSort(int n);
     void sustituirReiniciar();
 
+
     void insertarEnPos(int pos,int el);
 
 private:
-    Pagina paginasCargadas[3];
+    Pagina *anterior, *siguiente, *actual;
 };
 
 

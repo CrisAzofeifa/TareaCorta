@@ -15,13 +15,15 @@ int Controlador:: buscarPagina(int pos){
 
 bool Controlador::comprobarPag(int numeroPag){
 
-    for(int x = 0; x<3; x++){
-        if(paginasCargadas[x].getNumeroPagina()==numeroPag){
-            return true;
-        }
+    if(anterior->getNumeroPagina() == numeroPag){
+        return true;
+    }else if(actual->getNumeroPagina() == numeroPag){
+        return true;
+    }else if(siguiente->getNumeroPagina() == numeroPag){
+        return true;
+    }else{
+        return false;
     }
-
-    return false;
 }
 
 int Controlador::sacarElemento(int posicion){
@@ -29,7 +31,7 @@ int Controlador::sacarElemento(int posicion){
     if(comprobarPag(numPagina)){
         return sacarPagina(numPagina).pagina[posEnPagina(posicion)];
     }else{
-        descargarPagina(paginasCargadas[0].pagina);
+        descargarPagina(anterior->pagina);
         cargarPagina(numPagina);
         return sacarPagina(numPagina).pagina[posEnPagina(posicion)];
     }
@@ -44,17 +46,9 @@ int Controlador::posEnPagina(int pos) {
 }
 
 void Controlador::inicializar() {
-    Pagina *pagina1 = new Pagina(0);
-    Pagina *pagina2 = new Pagina(255);
-    Pagina *pagina3 = new Pagina((256*2)-1);
-
-    pagina1->cargarDatos(buscarPagina(0));
-    pagina2->cargarDatos(buscarPagina(255));
-    pagina3->cargarDatos(buscarPagina((256*2)-1));
-
-    paginasCargadas[0] = *pagina1;
-    paginasCargadas[1] = *pagina2;
-    paginasCargadas[2] = *pagina3;
+    anterior = new Pagina(0);
+    actual = new Pagina(255);
+    siguiente = new Pagina((256*2)-1);
 
     //bubbleSort(10240);
 }
@@ -74,19 +68,19 @@ void Controlador::descargarPagina(int numeros[]) {
 
 
 void Controlador::cargarPagina(int numeroPagina) {
-    Pagina *pagina = new Pagina(numeroPagina);
-    paginasCargadas[0] = paginasCargadas[1];
-    paginasCargadas[1] = paginasCargadas[2];
-    paginasCargadas[2] = *pagina;
+    anterior = actual;
+    actual = siguiente;
+    siguiente = new Pagina(numeroPagina);
 }
 
 Pagina Controlador::sacarPagina(int numeroPagina) {
-    for(int x=0; x<3; x++){
-        if(paginasCargadas[x].getNumeroPagina() == numeroPagina){
-            return paginasCargadas[x];
-        }
+    if(anterior->getNumeroPagina() == numeroPagina){
+        return *anterior;
+    }else if(actual->getNumeroPagina() == numeroPagina){
+        return *actual;
+    }else if(siguiente->getNumeroPagina() == numeroPagina){
+        return *siguiente;
     }
-    return Pagina(0);
 
 }
 

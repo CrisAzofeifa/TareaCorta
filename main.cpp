@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
     Controlador *nuevo;
-    nuevo->cargarPagina(0);
+    nuevo->inicializar();
 
 
     return 0;
