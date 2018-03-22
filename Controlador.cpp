@@ -3,6 +3,7 @@
 
 using namespace std;
 
+
 int Controlador:: buscarPagina(int pos){
 
     cout << "la pagina es "<< pos/256 ;
@@ -48,14 +49,14 @@ void Controlador::inicializar() {
     Pagina *pagina3 = new Pagina((256*2)-1);
 
     pagina1->cargarDatos(buscarPagina(0));
-    pagina1->cargarDatos(buscarPagina(255));
-    pagina1->cargarDatos(buscarPagina((256*2)-1));
+    pagina2->cargarDatos(buscarPagina(255));
+    pagina3->cargarDatos(buscarPagina((256*2)-1));
 
     paginasCargadas[0] = *pagina1;
     paginasCargadas[1] = *pagina2;
     paginasCargadas[2] = *pagina3;
 
-    bubbleSort(10240);
+    //bubbleSort(10240);
 }
 
 void Controlador::descargarPagina(int numeros[]) {
@@ -124,11 +125,11 @@ void Controlador::swap(int posJ, int posI)
     }
 
 void Controlador::sustituirReiniciar() {
-    descargarPagina(paginasCargadas[0].pagina);
+    /*descargarPagina(paginasCargadas[0].pagina);
     descargarPagina(paginasCargadas[1].pagina);
-    descargarPagina(paginasCargadas[2].pagina);
+    descargarPagina(paginasCargadas[2].pagina);*/
 
 
-    rename("Array.txt","holiiii.txt");
+    rename("holiiii.txt","Array.txt");
 
 }

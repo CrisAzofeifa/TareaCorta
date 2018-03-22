@@ -11,6 +11,7 @@
 
 class Controlador {
 public:
+
     void inicializar();
     int  buscarPagina(int pos);
     int  posEnPagina(int pos);
@@ -27,8 +28,6 @@ public:
 
 private:
     Pagina paginasCargadas[3];
-
-
 };
 
 

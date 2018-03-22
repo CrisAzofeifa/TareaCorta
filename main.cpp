@@ -9,9 +9,8 @@ using namespace std;
 
 int main() {
     Controlador *nuevo;
-    int vec[4];
-    nuevo->inicializar();
-    nuevo->sustituirReiniciar();
+    nuevo->cargarPagina(0);
+
 
     return 0;
 }
